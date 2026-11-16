@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Research Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Research Assistant</h1>
+
+        <p class="subtitle">
+            Search the web and explore information using AI.
+        </p>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Enter a research topic..."
+            >
+
+            <button id="searchButton" onclick="searchResearch()">
+                Search
+            </button>
+        </div>
+
+        <p id="status"></p>
+
+        <section id="answerSection" class="answer-section" hidden>
+            <h2>AI Research Summary</h2>
+            <p id="answer"></p>
+        </section>
+
+        <section id="resultsSection" hidden>
+            <h2>Research Sources</h2>
+            <div id="results"></div>
+        </section>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
